@@ -196,7 +196,7 @@ sub add_cast
 # These are the no-brainer conversions
 # There is still a special case for text types and case insensitivity (see convert_type) though
 my %types = ('int'              => 'int',
-             'nvarchar'         => 'varchar',
+             'nvarchar'         => 'text',
              'nchar'            => 'char',
              'char'             => 'char',
              'varchar'          => 'varchar',
