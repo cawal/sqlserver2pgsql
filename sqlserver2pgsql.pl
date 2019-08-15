@@ -1401,12 +1401,12 @@ sub parse_dump
     close $file;
 
     # We now ask guess...
-    my $decoder = guess_encoding($data, qw/iso8859-15/);
-    die $decoder unless ref($decoder);
+    #my $decoder = guess_encoding($data, qw/iso8859-15/);
+    #die $decoder unless ref($decoder);
 
     # If we got to here, it means we have found the right decoder
     # or at least, perl thinks it has :)
-    open $file, "<:encoding(" . $decoder->name . ")", $filename
+    open $file, "<:encoding(utf8)", $filename
         or die "Cannot open $filename";
 
     # Tagged because sql statements are often multi-line, so there are inner loops in some conditions
